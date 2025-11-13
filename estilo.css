@@ -89,7 +89,9 @@
         color: white;
         text-align: center;
         padding: 20px;
+        height: 100px;
     }
+
     
     .produtos {
         display: flex;
