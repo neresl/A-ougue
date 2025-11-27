@@ -1,104 +1,127 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Swift - Troca de Localização</title>
-    <link rel="stylesheet" href="estilo.css">
-    <link rel="icon" type="image/x-icon" href="img/image-removebg-preview (1).png">
-</head>
-<body>
-    <div class="top-bar">
-        <span>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" width="16" height="16" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
-            <strong id="localizacao-atual">São Paulo - SP</strong>. Preços válidos somente para essa Região.
-        </span>
-        <button class="btn-alterar" id="btnAlterar">ALTERAR ▼</button>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>SPcarnes - Troca de Localização</title>
+        <link rel="stylesheet" href="estilo.css">
+        <link rel="icon" type="image/x-icon"
+            href="img/image-removebg-preview (1).png">
+    </head>
+    <body>
+        <div class="top-bar">
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" width="16"
+                    height="16" viewBox="0 0 24 24"><path
+                        d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" /></svg>
+                <strong id="localizacao-atual">São Paulo - SP</strong>. Preços
+                válidos somente para essa Região.
+            </span>
+            <button class="btn-alterar" id="btnAlterar">ALTERAR ▼</button>
+        </div>
+
+        <div class="modal" id="modalLocalizacao">
+            <div class="modal-content">
+                
+                <h2>Selecione sua Região</h2>
+                <ul class="localizacao-lista" id="listaLocalizacoes">
+                    <li data-regiao="Araçatuba - SP">Araçatuba - SP</li>
+                    <li data-regiao="Birigüi - SP">Birigüi - SP</li>
+                    <li data-regiao="Andradina - SP">Andradina - SP</li>
+                    <li data-regiao="Penápolis - SP">Penápolis - SP</li>
+                    <li data-regiao="Arapoema - SP">Arapoema - SP</li>
+                    <li data-regiao="Votuporanga - SP">Votuporanga - SP</li>
+                    <li data-regiao="Valentim Gentil - SP">Valentim Gentil -
+                        SP</li>
+                    <li data-regiao="Bady Bassitt - SP">Bady Bassitt - SP</li>
+                    <li data-regiao="Guararapes - SP">Guararapes - SP</li>
+                    <li data-regiao="José Bonifácio - SP">José Bonifácio -
+                        SP</li>
+                    <li data-regiao="Nipoã - SP">Nipoã - SP</li>
+                    <li data-regiao="Clementina - SP">Clementina - SP</li>
+                    <li data-regiao="Mirandópolis - SP">Mirandópolis - SP</li>
+                    <li data-regiao="Pereira Barreto - SP">Pereira Barreto -
+                        SP</li>
+                    <li data-regiao="Derrubadas - SP">Derrubadas - SP</li>
+                </ul>
+            </div>
+        </div>
+        <header class="header">
+            <div class="logo">
+                <img src="img/image-removebg-preview (1).png" alt="Logo Açougue"
+                    height="100" width="100">
+            </div>
+
+            <!-- Navegação Principal -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pages/produtos.html">produtos</a></li>
+                    <li><a href="pages/contato.html">Contato</a></li>
+                </ul>
+            </nav>
+
+            <!-- Carrinho de Compras -->
+            <div class="cart">
+                <a href="#"><img src="img/carrinho.png" alt width="25"
+                        height="25"></a>
+            </div>
+
+        </header>
+    </div>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="img/Gemini_Generated_Image_qsij0kqsij0kqsij.png"
+                style="width:100%" height="360" width="1168">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="img/Gemini_Generated_Image_nn965tnn965tnn96.png"
+                style="width:100%" height="360" width="1168">
+        </div>
+        <div class="mySlides fade">
+            <img src="img/Gemini_Generated_Image_f9muu1f9muu1f9mu.png"
+                style="width:100%" height="360" width="1168">
+        </div>
+        <div style="text-align:center">
+
+            <div class="dots-container">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+
+        </div>
+
+        <script src="slider.js"></script>
+    </div>
+    <h1>Qualidade e sabor para as suas refeições, todos os dias</h1>
+
+    <div class="products-section" id="products">
+      <div class="products-grid">
+        <!-- Produtos serão gerados aqui via JS -->
+      </div>
     </div>
 
-    <div class="modal" id="modalLocalizacao">
-        <div class="modal-content">
-            <h2>Selecione sua Região</h2>
-            <ul class="localizacao-lista" id="listaLocalizacoes">
-                <li data-regiao="Araçatuba - SP">Araçatuba - SP</li>
-                <li data-regiao="Birigüi - SP">Birigüi - SP</li>
-                <li data-regiao="Andradina - SP">Andradina - SP</li>
-                <li data-regiao="Penápolis - SP">Penápolis - SP</li>
-                <li data-regiao="Arapoema - SP">Arapoema - SP</li>
-                <li data-regiao="Votuporanga - SP">Votuporanga - SP</li>
-                <li data-regiao="Valentim Gentil - SP">Valentim Gentil - SP</li>
-                <li data-regiao="Bady Bassitt - SP">Bady Bassitt - SP</li>
-                <li data-regiao="Guararapes - SP">Guararapes - SP</li>
-                <li data-regiao="José Bonifácio - SP">José Bonifácio - SP</li>
-                <li data-regiao="Nipoã - SP">Nipoã - SP</li>
-                <li data-regiao="Clementina - SP">Clementina - SP</li>
-                <li data-regiao="Mirandópolis - SP">Mirandópolis - SP</li>
-                <li data-regiao="Pereira Barreto - SP">Pereira Barreto - SP</li>
-                <li data-regiao="Derrubadas - SP">Derrubadas - SP</li>
-            </ul>
-        </div>
-    </div>
-    <header class="header">
-        <div class="logo">
-            <img src="img/image-removebg-preview (1).png" alt="Logo Açougue" height="100" width="100">
-        </div>
-        
-        <!-- Navegação Principal -->
-        <nav class="main-nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pages/produtos.html">produtos</a></li>
-                <li><a href="pages/contato.html">Contato</a></li>
-            </ul>
-        </nav>
-
-        <!-- Barra de Pesquisa -->
-        <div class="search-bar">
-            <input type="text" placeholder="Procurar produtos..." id="search">
-            <button onclick="searchProducts()">Buscar</button>
-        </div>
-
-        <!-- Carrinho de Compras -->
-        <div class="cart">
-            <a href="#"><img src="img/carrinho.png" alt="" width="25" height="25" ></a>
-        </div>
-
-    </header>
-        </div>
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <img src="img/Gemini_Generated_Image_qsij0kqsij0kqsij.png" style="width:100%" height="360" width="1168" > 
-            </div>
-            
-            <div class="mySlides fade">
-                <img src="img/Gemini_Generated_Image_nn965tnn965tnn96.png"  style="width:100%" height="360" width="1168">
-            </div>
-            <div class="mySlides fade">
-            <img src="img/Gemini_Generated_Image_f9muu1f9muu1f9mu.png" style="width:100%"  height="360" width="1168">
-            </div>
-            <div style="text-align:center">
-        
     
-            
-            
-                <div class="dots-container">
-                    <span class="dot active" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                </div>
-            
-            </div>
-            
-            <script src="slider.js"></script>
-        </div>
-        </div>
-        <br>
-        
-        
-        
-        <script>
-        
-        </script>
-    <script src="script.js"></script>
+    <div class="products-section" id="products-natal">
+      <div class="products-grid">
+        <!-- Produtos Natal gerados aqui via JS -->
+      </div>
+    </div>
+    
+    <section id="cart">
+      <h2>Carrinho de Compras</h2>
+      <div id="cart-items">
+        <p>Seu carrinho está vazio.</p>
+      </div>
+      <p id="cart-total"></p>
+    </section>
+    
+    
+
+    <script src="../A-ougue/pages/script2.js"></script>
+<script src="script.js"></script>
+      
 </body>
 </html>
