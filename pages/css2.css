@@ -1,152 +1,234 @@
 body {
-    /* Define a fonte de texto padrão */
     font-family: Arial, sans-serif;
-    /* Adiciona uma margem de 20px ao redor de todo o corpo da página */
     margin: 20px;
-    /* Define o fundo da página como branco */
     background: #fff;
-    /* Define a cor padrão do texto (cinza escuro) */
     color: #333;
-}
-h1, h2 {
-    /* Centraliza os títulos principais */
+  }
+  h1, h2 {
     text-align: center;
-}
-.products-section {
-    /* Define a largura máxima da seção de produtos */
+  }
+  .products-section {
     max-width: 1200px;
-    /* Centraliza a seção horizontalmente e adiciona margem inferior */
     margin: 0 auto 40px;
-}
-.products-grid {
-    /* Usa Flexbox para organizar os cartões de produto */
+  }
+  .products-grid {
     display: flex;
-    /* Permite que os cartões quebrem para a próxima linha se não houver espaço */
     flex-wrap: wrap;
-    /* Espaçamento de 20px entre os cartões */
     gap: 20px;
-    /* Centraliza os cartões horizontalmente dentro do grid */
     justify-content: center;
-}
-.product-card {
-    /* Borda cinza clara ao redor de cada cartão */
+  }
+  .product-card {
     border: 1px solid #ddd;
-    /* Arredondamento suave dos cantos */
     border-radius: 6px;
-    /* Largura fixa para cada cartão de produto */
     width: 220px;
-    /* Espaçamento interno */
     padding: 10px;
-    /* Garante que padding e borda sejam incluídos na largura (importante para Flexbox) */
     box-sizing: border-box;
-    /* Centraliza o texto dentro do cartão */
     text-align: center;
-}
-.product-card img {
-    /* Garante que a imagem preencha o máximo da largura do cartão */
+  }
+  .product-card img {
     max-width: 100%;
-    /* Arredondamento dos cantos da imagem */
     border-radius: 6px;
-}
-.product-name {
-    /* Nome do produto em negrito */
+  }
+  .product-name {
     font-weight: bold;
-    /* Margem superior e inferior */
     margin: 10px 0 5px;
     font-size: 16px;
-}
-.product-weight, .product-desc {
-    /* Tamanho e cor (cinza) para peso e descrição */
+  }
+  .product-weight, .product-desc {
     font-size: 14px;
     color: #666;
-}
-.product-price {
-    /* Estilo de destaque para o preço */
+  }
+  .product-price {
     margin: 10px 0;
     font-weight: bold;
-    /* Cor laranja forte para o preço */
     color: #E65100;
     font-size: 18px;
-}
-.add-btn {
-    /* Cor de fundo do botão Adicionar (laranja) */
+  }
+  .add-btn {
     background-color: #E65100;
-    /* Remove a borda padrão */
     border: none;
-    /* Cor do texto (branco) */
     color: #fff;
     font-weight: bold;
-    /* Espaçamento interno */
     padding: 8px 15px;
-    /* Muda o cursor para indicar que é clicável */
     cursor: pointer;
-    /* Arredondamento dos cantos */
     border-radius: 4px;
-    /* Prepara para uma transição suave de cor */
     transition: background-color 0.3s ease;
-}
-.add-btn:hover {
-    /* Cor de fundo no hover (laranja escuro) */
+  }
+  .add-btn:hover {
     background-color: #bf360c;
-}
-.quantity-input {
-    /* Largura da caixa de quantidade */
+  }
+  .quantity-input {
     width: 50px;
-    /* Centraliza o número digitado */
     text-align: center;
-    /* Espaço à direita (separando do botão) */
     margin-right: 8px;
-}
-/* Estilos para a seção do Carrinho */
-#cart {
-    /* Largura máxima para centralizar o carrinho */
+  }
+  /* Carrinho */
+  #cart {
     max-width: 1200px;
     margin: 0 auto;
-    /* Linha laranja de separação no topo */
     border-top: 2px solid #E65100;
-    /* Espaçamento interno no topo */
     padding-top: 20px;
-}
-#cart h2 {
-    /* Cor do título do carrinho */
+  }
+  #cart h2 {
     color: #E65100;
-}
-#cart-items {
-    /* Espaçamento e linha de separação para a lista de itens */
+  }
+  #cart-items {
     margin-top: 15px;
     border-top: 1px solid #ccc;
-}
-.cart-item {
-    /* Usa Flexbox para alinhar nome, quantidade, preço e botão de remoção */
+  }
+  .cart-item {
     display: flex;
-    /* Distribui o espaço entre os elementos */
     justify-content: space-between;
     padding: 10px 0;
-    /* Linha separadora entre itens */
     border-bottom: 1px solid #eee;
-    /* Centraliza verticalmente */
     align-items: center;
-}
-.cart-item-name {
-    /* Permite que o nome ocupe mais espaço (2 partes do flex) */
+  }
+  .cart-item-name {
     flex: 2;
-}
-.cart-item-qty {
-    /* Permite que a quantidade ocupe 1 parte do flex */
+  }
+  .cart-item-qty {
     flex: 1;
-    /* Centraliza o texto */
     text-align: center;
-}
-.cart-item-price {
-    /* Permite que o preço ocupe 1 parte do flex */
+  }
+  .cart-item-price {
     flex: 1;
-    /* Alinha o preço à direita e em negrito */
     text-align: right;
     font-weight: bold;
-}
-.remove-btn {
-    /* Botão de remoção (X) sem fundo ou borda */
+  }
+  .remove-btn {
     background: none;
     border: none;
-    /* Cor do texto (laranja) */
     color: #E65100;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  #cart-total {
+    text-align: right;
+    font-size: 20px;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  @media(max-width: 700px){
+    .products-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+    .product-card {
+      width: 90%;
+    }
+  }
+/* Estilos gerais para o header */
+header {
+    background-color: #e67e22; /* Cor de fundo laranja */
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd; /* Linha separadora */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Container para centralizar o conteúdo */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Logo */
+header .logo img {
+    height: 40px; /* Altura do logo */
+}
+
+/* Estilo do menu de navegação */
+header .nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+header .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+header .nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Barra de pesquisa e carrinho */
+header .search-cart {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .search-cart input {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 220px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+header .search-cart input:focus {
+    border-color: #34495e;
+}
+
+header .search-cart button {
+    background-color: #34495e;
+    color: white;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+header .search-cart button:hover {
+    background-color: #2c3e50;
+}
+
+/* Ícone do carrinho */
+header .cart-icon img {
+    height: 25px;
+    width: 25px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .nav-links {
+        margin-top: 10px;
+        gap: 15px;
+    }
+
+    header .search-cart {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    header .search-cart input {
+        width: 60%;
+    }
+}
+
+.cart a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cart a:hover {
+    color: #ec6d04; /* Amarelo suave para destaque */
+}
