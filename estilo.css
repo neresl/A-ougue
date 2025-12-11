@@ -1,135 +1,190 @@
 * {
+    /* Reseta as margens e preenchimentos padrão do navegador */
     margin: 0;
     padding: 0;
+    /* Garante que a borda e o preenchimento sejam incluídos no tamanho total do elemento */
     box-sizing: border-box;
 }
 
 body {
+    /* Define a fonte padrão para todo o corpo do documento */
     font-family: Arial, Verdana, sans-serif;
+    /* Define a cor de fundo principal da página (cinza claro) */
     background-color: #f4f4f4;
 }
 
 h1, h2 {
+    /* Centraliza o texto de todos os títulos principais */
     text-align: center;
 }
 
 button {
+    /* Cor de fundo padrão para botões (verde) */
     background-color: #28a745;
+    /* Cor do texto do botão (branco) */
     color: white;
+    /* Espaçamento interno */
     padding: 10px;
+    /* Remove a borda padrão */
     border: none;
+    /* Arredondamento dos cantos */
     border-radius: 5px;
-    cursor: not-allowed;
+    /* Muda o cursor para uma mãozinha ao passar por cima */
+    cursor: pointer;
+    /* Prepara para uma transição suave de cores (efeito visual) */
     transition: background-color 0.3s;
 }
 
 button:hover {
+    /* Escurece ligeiramente o botão quando o mouse está sobre ele */
     background-color: #218838;
 }
 
 .top-bar {
+    /* Faixa superior para localização/avisos (laranja escuro) */
     background-color: #d9480f;
+    /* Cor do texto (branco) */
     color: #fff;
+    /* Espaçamento interno */
     padding: 10px 20px;
+    /* Usa Flexbox para organizar o conteúdo em linha */
     display: flex;
+    /* Distribui o espaço entre os elementos (localização em um lado, outros no outro) */
     justify-content: space-between;
+    /* Centraliza verticalmente os elementos (como o botão) */
     align-items: center;
+    /* Deixa o texto em negrito */
     font-weight: bold;
     font-size: 14px;
 }
 
 .top-bar span {
+    /* Garante que o ícone e o texto de localização fiquem alinhados */
     display: flex;
     align-items: center;
 }
 
 .top-bar svg {
+    /* Espaço à direita do ícone SVG */
     margin-right: 5px;
 }
 
 .btn-alterar {
+    /* Botão de localização: fundo transparente */
     background: transparent;
+    /* Borda branca fina */
     border: 1px solid #fff;
+    /* Canto bem arredondado (pílula) */
     border-radius: 20px;
+    /* Cor do texto (branco) */
     color: #fff;
     font-weight: 600;
-    cursor: not-allowed;
+    cursor: pointer;
     padding: 5px 15px;
+    /* Transição suave para o efeito hover */
     transition: background-color 0.3s ease;
 }
 
 .btn-alterar:hover {
+    /* Efeito hover: inverte as cores (fundo branco, texto laranja) */
     background-color: #fff;
     color: #d9480f;
 }
 
 .header, header {
+    /* Estiliza o cabeçalho principal da página (laranja) */
     background-color: #e67e22;
     padding: 15px 0;
+    /* Linha sutil na parte inferior */
     border-bottom: 1px solid #ddd;
+    /* Sombra suave para destacar o cabeçalho */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .header .container {
+    /* Usa Flexbox para alinhar logo, navegação e busca */
     display: flex;
+    /* Distribui os elementos nas extremidades do cabeçalho */
     justify-content: space-between;
+    /* Centraliza verticalmente */
     align-items: center;
+    /* Largura máxima para centralizar o conteúdo em telas grandes */
     max-width: 1200px;
+    /* Centraliza o container na página */
     margin: 0 auto;
+    /* Espaçamento lateral para telas menores */
     padding: 0 20px;
 }
 
 .header .logo img {
+    /* Define a altura do logo */
     height: 50px;
 }
 
 .main-nav {
+    /* Permite que a navegação ocupe o máximo de espaço no centro */
     flex-grow: 1; 
+    /* Centraliza o texto/links dentro do espaço disponível */
     text-align: center; 
 }
 
 .main-nav ul {
+    /* Remove os marcadores de lista */
     list-style: none;
+    /* Usa Flexbox para alinhar os links em linha */
     display: flex;
+    /* Espaçamento entre os itens do menu */
     gap: 20px;
+    /* Centraliza os links horizontalmente */
     justify-content: center;
     padding: 0;
     margin: 0;
 }
 
 .main-nav ul li a {
+    /* Cor do texto (branco) */
     color: white;
+    /* Remove o sublinhado padrão dos links */
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
+    /* Converte o texto para letras maiúsculas */
     text-transform: uppercase;
 }
 
 .main-nav ul li a:hover {
+    /* Adiciona uma linha branca na parte inferior ao passar o mouse */
     border-bottom: 2px solid white;
 }
 
 .search-cart, .search-bar {
+    /* Usa Flexbox para alinhar a barra de busca e o carrinho (ou botão de busca) */
     display: flex;
     align-items: center;
+    /* Espaço entre os elementos de busca/carrinho */
     gap: 10px;
 }
 
 .search-cart input, .search-bar input {
+    /* Estilo da caixa de texto de busca */
     padding: 10px;
     font-size: 14px;
     border-radius: 5px;
     border: 1px solid #ccc;
     width: 250px;
+    /* Remove o contorno padrão de foco */
     outline: none;
+    /* Prepara para a transição de cor da borda */
     transition: border-color 0.3s ease;
 }
 
 .search-cart input:focus {
+    /* Altera a cor da borda ao focar na caixa de texto */
     border-color: #34495e;
 }
 
 .search-cart button, .search-bar button {
+    /* Cor do botão de busca (azul marinho) */
     background-color: #34495e;
     color: white;
     padding: 10px 15px;
@@ -141,10 +196,12 @@ button:hover {
 }
 
 .search-cart button:hover, .search-bar button:hover {
+    /* Escurece o botão de busca no hover */
     background-color: #2c3e50;
 }
 
 .cart a {
+    /* Estilo do link do carrinho (branco) */
     color: white;
     font-size: 18px;
     text-decoration: none;
@@ -152,129 +209,181 @@ button:hover {
 }
 
 .cart a:hover {
+    /* Altera a cor do link do carrinho no hover */
     color: #ec6d04;
 }
 
 .slideshow-container, .slider-container {
+    /* Define a largura máxima do carrossel para centralizá-lo */
     max-width: 1168px;
+    /* Essencial para posicionar os pontos indicadores (dots) */
     position: relative;
+    /* Margem no topo e centralização automática */
     margin: 40px auto 0;
+    /* Esconde qualquer conteúdo que exceda os limites do container */
     overflow: hidden;
 }
 
 .slide, .mySlides {
+    /* Inicialmente, todos os slides ficam escondidos */
     display: none;
     height: 360px;
 }
 
 .slide.active {
+    /* A classe JS adiciona isso para mostrar o slide atual */
     display: block;
 }
 
 .slide img, .slideshow-container div img {
+    /* Faz a imagem preencher 100% do container */
     width: 100%;
+    /* Faz a imagem preencher 100% da altura do container */
     height: 100%;
+    /* Garante que a imagem cubra o espaço sem distorcer (cortando se necessário) */
     object-fit: cover;
+    /* Cantos arredondados na imagem */
     border-radius: 20px;
+    /* Corrige pequenos problemas de alinhamento de imagem */
     vertical-align: middle;
 }
 
 .numbertext, .text {
+    /* Estilo base para textos sobre o slide */
     color: #f2f2f2;
     padding: 8px 12px;
+    /* Permite posicionar o texto de forma absoluta dentro do container relativo */
     position: absolute;
 }
-.numbertext { top: 0; font-size: 12px; }
-.text { bottom: 8px; font-size: 15px; width: 100%; text-align: center; }
+.numbertext { 
+    /* Posiciona o número do slide no topo */
+    top: 0; 
+    font-size: 12px; 
+}
+.text { 
+    /* Posiciona o texto principal na parte inferior e centraliza */
+    bottom: 8px; 
+    font-size: 15px; 
+    width: 100%; 
+    text-align: center; 
+}
 
 .fade {
+    /* Aplica a animação definida abaixo */
     animation-name: fade;
+    /* Duração da animação */
     animation-duration: 1.5s;
 }
 
 @keyframes fade {
-    from { opacity: .4 }
-    to { opacity: 1 }
+    /* Define como a animação de desvanecimento acontece */
+    from { opacity: .4 } /* Começa 40% visível (quase transparente) */
+    to { opacity: 1 } /* Termina totalmente visível */
 }
 
 .dots-container {
+    /* Container para os pontos de navegação do carrossel */
     text-align: center;
     padding: 10px 0;
+    /* Posiciona-se absolutamente no slide */
     position: absolute;
     bottom: 30px;
     width: 100%;
+    /* Garante que os pontos fiquem por cima da imagem */
     z-index: 10;
 }
 
 .dot {
+    /* Estilo dos indicadores (pontos) */
     cursor: pointer;
     height: 15px;
     width: 15px;
     margin: 0 4px;
+    /* Cor padrão do ponto (laranja) */
     background-color: #f7931e;
+    /* Forma circular */
     border-radius: 50%;
+    /* Permite alinhar os pontos lado a lado */
     display: inline-block;
     transition: background-color 0.6s ease;
+    /* Borda branca */
     border: 2px solid #ffffff;
 }
 
 .dot.active, .dot:hover {
+    /* Estilo quando o ponto está ativo (slide atual) ou no hover */
     background-color: #fafafa;
+    /* Sombra suave */
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
 }
 
 .products-section {
+    /* Define o container geral da seção de produtos */
     max-width: 1200px;
     margin: 40px auto;
 }
 
 .products-grid {
+    /* Usa Flexbox para criar uma grade de produtos */
     display: flex;
+    /* Permite que os cartões quebrem para a próxima linha se não houver espaço */
     flex-wrap: wrap;
+    /* Espaço entre os cartões */
     gap: 20px;
+    /* Centraliza os cartões na tela */
     justify-content: center;
     padding: 20px;
 }
 
 .product-card {
+    /* Estilo base do cartão individual */
     border: 1px solid #ddd;
     border-radius: 6px;
+    /* Largura fixa do cartão */
     width: 220px;
     padding: 10px;
     box-sizing: border-box;
     text-align: center;
     background-color: #fff;
+    /* Transição para o efeito de sombra */
     transition: box-shadow 0.3s ease;
 }
 
 .product-card:hover {
+    /* Adiciona uma sombra mais forte ao passar o mouse */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .product-card img {
+    /* Garante que a imagem se ajuste ao cartão */
     max-width: 100%;
     border-radius: 6px;
 }
 
 .product-name {
+    /* Estilo do nome do produto */
     font-weight: bold;
     margin: 10px 0 5px;
     font-size: 16px;
 }
 
 .product-weight, .product-desc {
+    /* Estilo da descrição/peso (texto cinza) */
     font-size: 14px;
     color: #666;
 }
 
 .product-price {
+    /* Estilo de destaque do preço */
     margin: 10px 0;
     font-weight: bold;
+    /* Cor de destaque (laranja forte) */
     color: #E65100;
     font-size: 18px;
 }
 
 .quantity-input {
+    /* Estilo da caixa de entrada de quantidade */
     width: 50px;
     text-align: center;
     margin-right: 8px;
@@ -284,6 +393,7 @@ button:hover {
 }
 
 .add-btn {
+    /* Estilo do botão "Adicionar" (laranja) */
     background-color: #E65100;
     border: none;
     color: #fff;
@@ -295,28 +405,37 @@ button:hover {
 }
 
 .add-btn:hover {
+    /* Escurece o botão "Adicionar" no hover */
     background-color: #bf360c;
 }
 
 .modal {
+    /* Inicialmente escondido */
     display: none;
+    /* Fica fixo na tela, não importa onde o usuário role */
     position: fixed;
+    /* Garante que ele fique sobre todos os outros elementos */
     z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
+    /* Cor de fundo semi-transparente (o overlay) */
     background-color: rgba(0, 0, 0, 0.5);
+    /* Usa Flexbox para centralizar o conteúdo */
     justify-content: center;
     align-items: center;
+    /* Permite rolar se o conteúdo for muito grande */
     overflow: auto;
 }
 
 .modal.active {
+    /* A classe JS adiciona isso para mostrar o modal */
     display: flex;
 }
 
 .modal-content {
+    /* Estilo da caixa branca de conteúdo dentro do modal */
     background: #fff;
     padding: 20px;
     border-radius: 6px;
@@ -327,43 +446,54 @@ button:hover {
 }
 
 .modal-content h2 {
+    /* Cor do título do modal */
     margin-bottom: 15px;
     color: #d9480f;
 }
 
 .localizacao-lista {
+    /* Estilo da lista de opções */
     list-style: none;
     padding: 0;
     margin: 0 auto;
     text-align: center;
+    /* Inicialmente, a lista é invisível */
     opacity: 0;
+    /* Aplica as duas animações definidas abaixo */
     animation: fadeIn 1s forwards, cascade 1.5s forwards;
+    /* Começa com um atraso */
     animation-delay: 0.5s;
 }
 
 .localizacao-lista li {
+    /* Estilo de cada item da lista */
     padding: 10px;
     cursor: pointer;
     border-radius: 4px;
     transition: background-color 0.2s ease;
+    /* Inicialmente invisível para a animação em cascata */
     opacity: 0;
     animation: fadeIn 0.8s forwards, cascade 1.5s forwards;
 }
 
 .localizacao-lista li:hover {
+    /* Cor de fundo leve ao passar o mouse */
     background-color: #f2f2f2;
 }
 
+/* Define a animação de aparecimento (fade in) */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
+/* Define a animação de movimento (caindo suavemente) */
 @keyframes cascade {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
+    0% { opacity: 0; transform: translateY(20px); } /* Começa 20px abaixo */
+    100% { opacity: 1; transform: translateY(0); } /* Termina na posição normal */
 }
 
+/* Aplica atrasos diferentes para a animação da lista, criando o efeito "cascata" */
 .localizacao-lista li:nth-child(1) { animation-delay: 0.5s; }
 .localizacao-lista li:nth-child(2) { animation-delay: 0.7s; }
 .localizacao-lista li:nth-child(3) { animation-delay: 0.9s; }
