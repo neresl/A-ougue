@@ -1,119 +1,174 @@
-/* Header */
+/*
+ * BL-1: ESTILOS INICIAIS DO CABEÇALHO (NAVEGAÇÃO) - Este bloco é sobreposto pelo BL-4 abaixo, mas define a estrutura inicial.
+ */
 header {
-    background-color: #e67e22;
     /* Cor de fundo laranja */
-    padding: 15px 0;
+    background-color: #e67e22;
+    /* Linha separadora inferior sutil */
     border-bottom: 1px solid #ddd;
+    /* Sombra suave para levantar o cabeçalho */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
 }
 
 header .logo img {
+    /* Define a altura do logo na navegação */
     height: 50px;
 }
 
 header .nav-links {
+    /* Usa Flexbox para alinhar os links em linha */
     display: flex;
+    /* Espaço de 20px entre os links */
     gap: 20px;
 }
 
 header .nav-links a {
+    /* Cor do texto (branco) */
     color: white;
+    /* Remove o sublinhado padrão */
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
+    /* Converte o texto para letras maiúsculas */
     text-transform: uppercase;
 }
 
 header .nav-links a:hover {
+    /* Adiciona sublinhado ao passar o mouse */
     text-decoration: underline;
 }
 
+/*
+ * BL-2: ESTILOS GERAIS DA PÁGINA (BODY)
+ */
 body {
+    /* Define a fonte moderna Roboto */
     font-family: 'Roboto', sans-serif;
+    /* Remove margens e preenchimentos padrão */
     margin: 0;
     padding: 0;
+    /* Cor de fundo clara (quase branco) */
     background-color: #f8f9fa;
+    /* Cor padrão do texto (cinza escuro) */
     color: #333;
 }
 
+/*
+ * BL-3: RE-ESTILIZAÇÃO DO CABEÇALHO (APLICAÇÃO DE GRADIENTE) - Este bloco sobrescreve o BL-1 para o header.
+ */
 header {
+    /* Aplica um gradiente de cor laranja para um visual moderno */
     background: linear-gradient(135deg, #ff6600, #ff8533);
     color: white;
+    /* Aumenta o espaçamento interno, criando um cabeçalho maior */
     padding: 40px 20px;
+    /* Centraliza o texto (títulos e parágrafos) */
     text-align: center;
+    /* Sombra mais pronunciada */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
+    /* Remove margem padrão */
     margin: 0;
+    /* Tamanho grande para o título principal */
     font-size: 2.5em;
 }
 
 header p {
+    /* Tamanho maior para o subtítulo */
     font-size: 1.2em;
     margin-top: 10px;
 }
 
+/*
+ * BL-4: CONTAINER E SEÇÃO DE INFORMAÇÕES DE CONTATO
+ */
 .container {
+    /* Define a largura máxima para o conteúdo principal */
     max-width: 1200px;
+    /* Centraliza o container */
     margin: 0 auto;
     padding: 20px;
 }
 
 .contact-info {
+    /* Usa Flexbox para alinhar os itens de contato em linha */
     display: flex;
+    /* Permite quebra de linha se a tela for estreita */
     flex-wrap: wrap;
+    /* Distribui os itens uniformemente */
     justify-content: space-around;
     margin: 40px 0;
 }
 
 .contact-item {
+    /* Permite que o item ocupe o espaço disponível (igual) */
     flex: 1;
+    /* Garante que o item não fique menor que 250px */
     min-width: 250px;
     text-align: center;
     margin: 20px;
     padding: 20px;
+    /* Fundo branco e cantos arredondados */
     background: white;
     border-radius: 8px;
+    /* Sombra suave */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Transição para o efeito hover */
     transition: transform 0.3s;
 }
 
 .contact-item:hover {
+    /* Efeito de levitação: move o item 5px para cima ao passar o mouse */
     transform: translateY(-5px);
 }
 
 .contact-item i {
+    /* Ícone grande (de bibliotecas como Font Awesome) */
     font-size: 2em;
+    /* Cor do ícone (laranja) */
     color: #ff6600;
     margin-bottom: 10px;
 }
 
+/*
+ * BL-5: ESTILOS DO FORMULÁRIO DE CONTATO
+ */
 form {
+    /* Fundo branco para o formulário */
     background: white;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Largura máxima para o formulário */
     max-width: 600px;
+    /* Centraliza o formulário na página */
     margin: 40px auto;
 }
 
 label {
+    /* Faz o label ocupar sua própria linha */
     display: block;
     margin-bottom: 8px;
+    /* Deixa o texto do label em negrito */
     font-weight: 700;
 }
 
 input, textarea {
+    /* Faz os campos de input e textarea ocuparem 100% da largura do formulário */
     width: 100%;
     padding: 12px;
     margin-bottom: 20px;
+    /* Borda cinza clara */
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 1em;
 }
 
 button {
+    /* Cor de fundo do botão (laranja) */
     background-color: #ff6600;
     color: white;
     padding: 12px 24px;
@@ -121,47 +176,63 @@ button {
     border-radius: 4px;
     cursor: pointer;
     font-size: 1em;
+    /* Faz o botão ocupar 100% da largura do formulário */
     width: 100%;
+    /* Transição para o efeito hover */
     transition: background-color 0.3s;
 }
 
 button:hover {
+    /* Escurece ligeiramente o botão no hover */
     background-color: #e55a00;
 }
 
+/*
+ * BL-6: ESTILOS PARA MENSAGENS DE FEEDBACK (Sucesso/Erro)
+ */
 .message {
+    /* Estilo básico para a caixa de mensagem */
     margin-top: 20px;
     padding: 10px;
     border-radius: 4px;
+    /* Inicialmente, esconde a mensagem */
     display: none;
 }
 
 .success {
+    /* Esquema de cores para mensagem de sucesso (verde claro) */
     background-color: #d4edda;
     color: #155724;
     border: 1px solid #c3e6cb;
 }
 
 .error {
+    /* Esquema de cores para mensagem de erro (vermelho claro) */
     background-color: #f8d7da;
     color: #721c24;
     border: 1px solid #f5c6cb;
 }
 
+/*
+ * BL-7: ESTILOS DO RODAPÉ (FOOTER)
+ */
 footer {
+    /* Cor de fundo escura */
     background-color: #333;
     color: white;
     text-align: center;
     padding: 20px;
+    /* Garante espaço acima do rodapé */
     margin-top: 40px;
 }
 
 footer a {
+    /* Cor dos links no rodapé (laranja) */
     color: #ff6600;
     text-decoration: none;
 }
 
 footer a:hover {
+    /* Sublinha os links ao passar o mouse */
     text-decoration: underline;
 }
-
