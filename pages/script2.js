@@ -7,7 +7,7 @@ const produtos = [
       nome: "Filezinho Sassami Empanado Swift 700g",
       preco: 24.90,
       descricao: "Produto resfriado. Congelado na origem.",
-      imagem: "https://swiftbr.vteximg.com.br/arquivos/ids/209268-1500-1000/622073-filezinho-sassami-empanado_inn.jpg?v=638884534912530000"
+      imagem: "https://swiftbr.vteximg.com.br/arquivos/ids/209268-1500-1000/622073-filezinho-sassami-empanado_inn.jpg?v=638884534912530000"width="200" height="150">
     },
     // ... outros produtos
     {
@@ -15,21 +15,21 @@ const produtos = [
       nome: "Cubos de Músculo Swift 500g",
       preco: 19.90,
       descricao: "Produto resfriado. Congelado na origem.",
-      imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEAliAjkcrVjgrlTCgNBJzzMaTA73mk-WIXw&s"
+      imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEAliAjkcrVjgrlTCgNBJzzMaTA73mk-WIXw&s"width="200" height="150">
     },
     {
       id: 3,
       nome: "Pedaços de Filé de Salmão Swift 500g",
       preco: 52.90,
       descricao: "Produto resfriado. Congelado na origem.",
-      imagem: "https://swiftbr.vteximg.com.br/arquivos/ids/209154-768-768/616003-pedacos-de-file-de-salmao_inn.jpg?v=638882839751400000"
+      imagem: "https://swiftbr.vteximg.com.br/arquivos/ids/209154-768-768/616003-pedacos-de-file-de-salmao_inn.jpg?v=638882839751400000"width="200" height="150">
     },
     {
       id: 4,
       nome: "Almôndegas Bovinas Swift 500g",
       preco: 18.90,
       descricao: "Produto resfriado. Congelado na origem.",
-      imagem: "https://swiftbr.vteximg.com.br/arquivos/ids/208903-1500-1000/617769-almondegas-bovinas_rec.jpg?v=638875995088100000"
+      imagem: "https://swiftbr.vteximg.com.br/arquivos/ids/208903-1500-1000/617769-almondegas-bovinas_rec.jpg?v=638875995088100000"width="200" height="150">
     },
 ];
 
@@ -41,28 +41,28 @@ const produtosNatal = [
       nome: "Tender Swift de 0,8kg a 1,8kg",
       preco: 73.90,
       descricao: "Produto resfriado. Congelado na origem.",
-      imagem: "https://www.swift.com.br/arquivos/ids/209685"
+      imagem: "https://www.swift.com.br/arquivos/ids/209685"width="200" height="150">
     },
     {
       id: 6,
       nome: "Ave Natalina Festive Swift de 2,8kg a 4,5kg",
       preco: 26.90,
       descricao: "Produto resfriado. Congelado na origem.",
-      imagem: "https://www.swift.com.br/arquivos/ids/209832"
+      imagem: "https://www.swift.com.br/arquivos/ids/209832"width="200" height="150">
     },
     {
       id: 7,
       nome: "Pernil de Cordeiro Temperado Swift de 1,2kg",
       preco: 94.90,
       descricao: "Produto resfriado. Congelado na origem.",
-      imagem: "https://swiftbr.vteximg.com.br/arquivos/ids/206688-1500-1000/599070-pernil-de-cordeiro_1.jpg.jpg?v=638821511090230000"
+      imagem: "https://swiftbr.vteximg.com.br/arquivos/ids/206688-1500-1000/599070-pernil-de-cordeiro_1.jpg.jpg?v=638821511090230000"width="200" height="150">
     },
     {
       id: 8,
       nome: "Lombo de Bacalhau Desfiado Swift 800g",
       preco: 99.90,
       descricao: "Produto resfriado. Congelado na origem.",
-      imagem: "https://swiftbr.vteximg.com.br/arquivos/ids/209955-1500-1000/622485-lombo-bacalhau-dessalgado_inn.jpg?v=638901692506930000"
+      imagem: "https://swiftbr.vteximg.com.br/arquivos/ids/209955-1500-1000/622485-lombo-bacalhau-dessalgado_inn.jpg?v=638901692506930000"width="200" height="150">
     },
 ];
 
